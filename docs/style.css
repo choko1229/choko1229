@@ -3,16 +3,13 @@
         visibility: hidden;
     }
 
-    .icon,
-    .line,
-    .pc .profile,
-    {
-    display: none;
+    .pc * {
+        display: none;
     }
 
-.card {
-    width: 0px;
-}
+    .card {
+        width: 0px;
+    }
 }
 
 @media screen and (min-width: 521px) {
@@ -46,6 +43,7 @@ a {
 }
 
 .background {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-image: url(./background.jpeg);
@@ -68,8 +66,8 @@ a {
 }
 
 .card-mobile {
-    margin: auto;
-    position: relative;
+    margin: 0 auto;
+    display: block;
     background-color: #00000016;
     width: calc(100vw - 104px);
     height: auto;
@@ -79,6 +77,13 @@ a {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 2px 2px 4px #0000001d;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 .icon {
